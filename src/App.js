@@ -7,6 +7,7 @@ import { Router } from "@reach/router";
 
 import Home from './componentes-page/ItemListContainer';
 import Carrito from './componentes-page/Carrito';
+import ProductDetails from "./componentes-page/ProductDetails";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Header/>
       <Router>
         <Home path="/" />
+        <ProductDetails path="product-details/:productId"/>
         <Carrito path="/Carrito" />
       </Router>
     </main>

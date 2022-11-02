@@ -5,11 +5,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemePage } from './componentes/ThemePage';
+import { CartProvider } from 'react-use-cart';
 
 render(
   <React.StrictMode>
     <ThemePage>
+      <CartProvider>
         <App />
+      </CartProvider>
     </ThemePage>
   </React.StrictMode>
 , document.getElementById('root'));

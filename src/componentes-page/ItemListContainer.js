@@ -10,8 +10,15 @@ import ProductCard from '../componentes/ProductCard';
         const [searchInput, setSearchInput] = useState('');
         const [productData, setProductData] = useState([]);
         
-
+        async function getResponse(){
+            const res = await fetch('https://fakestoreapi.com/products')
+                              .then(res=> res.json());
+                              setProductData(await res);
+        }
     
+        useEffect(()=>{
+            getResponse();
+        },[]);
 
         return (
             <Container className="py-4">
