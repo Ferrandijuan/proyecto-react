@@ -20,6 +20,7 @@ import ProductCard from '../componentes/ProductCard';
             getResponse();
         },[]);
 
+  console.log(productData)
         return (
             <Container className="py-4">
                 <Row className="justify-content-center">
